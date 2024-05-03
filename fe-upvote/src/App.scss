@@ -1,4 +1,30 @@
-.App {
-  background-color: red;
-  text-align: center;
+$background-image: url("./img/office.png");
+
+.login-page-container {
+  display: flex;
+  height: 100vh;
+
+  .picture-container {
+    width: 66%;
+    background-image: $background-image;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .welcome {
+      text-align: center;
+      color: black;
+      font-size: xxx-large;
+      padding-bottom: 30%;
+    }
+  }
+
+  .login-info-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
