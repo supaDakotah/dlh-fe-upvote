@@ -1,15 +1,19 @@
-import "./App.scss";
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import LoginPage from "./pages/LoginPage";
+import CreateAccountPage from "./pages/CreateAccountPage";
+import "./styles/App.scss";
 
 const App = () => {
   return (
-    <div className="login-page-container">
-      <div className="picture-container">
-        <div className="welcome">
-          <div>Welcome to Upvote</div>
-        </div>
+    <Router>
+      <div className="App">
+        <Switch>
+          <Route path="/" component={LoginPage} exact />
+          <Route path="/create-account" component={CreateAccountPage} />
+        </Switch>
       </div>
-      <div className="login-info-container">hello from app</div>
-    </div>
+    </Router>
   );
 };
 
