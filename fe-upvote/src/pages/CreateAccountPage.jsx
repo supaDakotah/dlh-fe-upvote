@@ -1,5 +1,13 @@
+import React from "react";
+import LoginLayout from "../layouts/LoginLayout";
+import CreateAccountForm from "../forms/CreateAccountForm";
+
 const CreateAccountPage = () => {
-  return <h1>hello from Create Account Page</h1>;
+  return (
+    <LoginLayout>
+      <CreateAccountForm />
+    </LoginLayout>
+  );
 };
 
 export default CreateAccountPage;

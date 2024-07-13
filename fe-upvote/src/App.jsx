@@ -10,6 +10,7 @@ const App = () => {
       <div className="App">
         <Switch>
           <Route path="/" component={LoginPage} exact />
+          <Route path="/login" component={LoginPage} />
           <Route path="/create-account" component={CreateAccountPage} />
         </Switch>
       </div>
