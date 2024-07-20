@@ -17,9 +17,14 @@
   font-size: 18px;
 }
 
-.side-nav h1 {
-  margin-bottom: 20px;
-  font-size: 24px;
+.side-nav .header-text {
+  margin-bottom: 40px; /* Add more space between #WHYBHI and Apps label for centered look */
+  font-size: 36px;
+  text-align: center;
+}
+
+.side-nav .header-main-text {
+  padding-bottom: 20px; /* Add padding between AMERICA and #WHYBHI */
 }
 
 .side-nav .app-list {
@@ -27,17 +32,39 @@
   width: 100%;
   overflow-y: auto;
   margin-bottom: 20px;
+  text-align: center; /* Center align the list */
+}
+
+.side-nav .app-list label {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 20.7px; /* 15% larger than the original 18px */
+  text-align: center;
+  text-decoration: underline;
 }
 
 .side-nav .app-list ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  text-align: center; /* Center align the list items */
 }
 
 .side-nav .app-list ul li {
   padding: 10px;
   border-bottom: 1px solid #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s; /* Added transition for color */
+}
+
+.side-nav .app-list ul li:hover {
+  background-color: #b0b0b0; /* Changed hover color */
+  color: #fff; /* Changed hover font color to white */
+}
+
+.side-nav .app-list ul li.selected {
+  background-color: white;
+  color: black; /* Keep the text black when selected */
 }
 
 .side-nav .new-request-button,
@@ -46,7 +73,7 @@
   padding: 10px;
   margin-bottom: 10px;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px; /* Increased border radius */
   cursor: pointer;
 }
 
@@ -56,8 +83,9 @@
 }
 
 .side-nav .logout-button {
-  background-color: #f00;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000; /* Added border for visibility */
 }
 
 .content {
