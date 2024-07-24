@@ -1,17 +1,28 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import Modal from "./Modal"; // Import the modal component
 
 const SideNav = () => {
   const history = useHistory();
   const [selectedApp, setSelectedApp] = useState(null);
+  const [showModal, setShowModal] = useState(false);
 
   const handleLogout = () => {
     history.push("/login");
   };
 
   const handleNewRequest = () => {
-    // Logic to open the modal for adding a new request
-    alert("New Request Modal Open");
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
+
+  const handleSaveModal = (newObject) => {
+    console.log("New object to save:", newObject);
+    // Logic to save the new object can go here
+    setShowModal(false);
   };
 
   const handleAppClick = (app) => {
@@ -49,6 +60,11 @@ const SideNav = () => {
       <button className="logout-button" onClick={handleLogout}>
         Logout
       </button>
+      <Modal
+        show={showModal}
+        handleClose={handleCloseModal}
+        handleSave={handleSaveModal}
+      />
     </div>
   );
 };

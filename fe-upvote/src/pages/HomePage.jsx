@@ -11,6 +11,10 @@ const HomePage = () => {
           This is the home page of your application. You can add more content
           here.
         </p>
+        <p>
+          This is the home page of your application. You can add more content
+          here.
+        </p>
       </div>
     </div>
   );
